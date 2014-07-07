@@ -1,6 +1,9 @@
 /*
 	Contains all convenience methods for the my.less-project
 */
+@borderized-color: #e5e5e5;
+@borderized: 10px solid @borderized-color;
+@borderized-position: relative;
 
 .full-width {
 	width: 100%;
@@ -27,7 +30,42 @@
 	text-align: center;
 }
 
-.separator-border {
-	border-bottom: 10px solid #e5e5e5;
+.borderized {
+	position: @borderized-position;
+}
+
+.borderized-lower {
+	border-bottom: @borderized;
+	.borderized();
+}
+
+.borderized-upper {
+	border-upper: @borderized;
+	.borderized();
+}
+
+.arrow-lower {
 	position: relative;
+	&:after, &:before {
+		top: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+	&:after {
+		border-color: rgba(136, 183, 213, 0);
+		border-top-color: #fff;
+		border-width: 26px;
+		margin-left: -26px;
+	}
+	&:before {
+		border-color: rgba(194, 225, 245, 0);
+		border-top-color: @borderized-color;
+		border-width: 39px;
+		margin-left: -39px;
+	}
 }
