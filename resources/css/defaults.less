@@ -3,6 +3,7 @@
 */
 
 body {
+	background-color: #f5f5f5;
 	.margin(0);
 	.padding(0);
 }
@@ -10,8 +11,11 @@ body {
 .container {
 	width: 100%;
 	height: auto;
-	.borderized-lower();
+	.margin(20px 0);
 	&.fixed {
 		height: 700px;
 	};
+	&:first-of-type {
+		.margin(0);
+	}	
 }

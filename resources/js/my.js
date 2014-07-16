@@ -6,6 +6,7 @@ function destroyLessCache(pathToCss) { // e.g. '/css/' or '/stylesheets/'
   
   for (var key in window.localStorage) {
     if (key.indexOf(keyPrefix) === 0) {
+      console.log("Removeing cache for " + keyPrefix + "in pathToCss: " + pathToCss);
       delete window.localStorage[key];
     }
   }

@@ -1,6 +1,6 @@
 /*
-	Contains all convenience methods for the my.less-project
-*/
+ *	Contains all convenience methods used by other less-files. Also, this thing contains some convenience classes
+ */
 @borderized-color: #e5e5e5;
 @borderized: 10px solid @borderized-color;
 @borderized-position: relative;
@@ -12,6 +12,10 @@
 
 .text-shadow(@distance, @blur, @alpha) {
 	text-shadow: 0 @distance @blur rgba(150, 150, 150, @alpha);
+}
+
+.float(@placement) {
+	float: @placement;
 }
 
 .padding(@size) {
@@ -30,6 +34,14 @@
 	text-align: center;
 }
 
+.centralized-div() {
+	.centralized;
+	width: 90%;
+	overflow: hidden;
+	margin: 0 auto;
+	display: block;
+}
+
 .borderized {
 	position: @borderized-position;
 }
@@ -40,7 +52,7 @@
 }
 
 .borderized-upper {
-	border-upper: @borderized;
+	border-top: @borderized;
 	.borderized();
 }
 
@@ -58,7 +70,7 @@
 	}
 	&:after {
 		border-color: rgba(136, 183, 213, 0);
-		border-top-color: #fff;
+		border-top-color: #13d0a8;
 		border-width: 26px;
 		margin-left: -26px;
 	}
