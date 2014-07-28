@@ -2,10 +2,27 @@
  	All defaults which relates to e.g body, container, div etc goes here.
 */
 
+.selection() {
+	background-color: @splash-background_color;
+}
+
 body {
-	background-color: #f5f5f5;
+	background-color: @background_color;
 	.margin(0);
 	.padding(0);
+}
+
+a {
+	color: @splash-background_color;
+	text-decoration: none;
+}
+
+::selection {
+  .selection();
+}
+
+::-moz-selection {
+  .selection();
 }
 
 .container {
