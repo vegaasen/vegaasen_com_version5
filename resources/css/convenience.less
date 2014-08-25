@@ -10,6 +10,12 @@
 	height: 100%;
 }
 
+.desaturate(@amount) {
+	-webkit-filter: grayscale(@amount);
+	-moz-filter: grayscale(@amount);
+	filter: grayscale(@amount);
+}
+
 .text-shadow(@distance, @blur, @alpha) {
 	text-shadow: 0 @distance @blur rgba(150, 150, 150, @alpha);
 }

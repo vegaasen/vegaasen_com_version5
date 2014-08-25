@@ -157,10 +157,14 @@ function initialize() {
     mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, MAP_ID]
     },
+
     mapTypeId: MAP_ID,
+    zoomControl: false,
+    scaleControl: false,
     draggable: false,
     disableDefaultUI: true,
-    disableDoubleClickZoom: true
+    disableDoubleClickZoom: true,
+    scrollWheel: false
   };
 
   map = new google.maps.Map(document.getElementById(mapId), mapOptions);
