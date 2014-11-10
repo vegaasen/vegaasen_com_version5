@@ -29,11 +29,18 @@ a {
 .container {
 	width: 100%;
 	height: auto;
-	.margin(20px 0);
+	.margin(100px 0);
 	&.fixed {
 		height: 700px;
 	};
 	&:first-of-type {
 		.margin(0);
-	}	
+	}
+	@media(max-width:@iphone5-width) {
+		.margin(20px 0);
+		&.fixed{height: 450px;}
+	}
+	@media(max-width:@tablet-width) and (min-width:@iphone5-width) {
+		&.fixed{height: 550px;}
+	}
 }

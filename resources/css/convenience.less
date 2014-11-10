@@ -3,6 +3,7 @@
  */
 @borderized-color: #e5e5e5;
 @borderized: 10px solid @borderized-color;
+@borderized-iphone: 7px solid @borderized-color;
 @borderized-position: relative;
 
 .full-width {
@@ -59,6 +60,9 @@
 .borderized-lower {
 	border-bottom: @borderized;
 	.borderized();
+	@media(max-width:@iphone5-width) {
+		border-bottom: @borderized-iphone;;
+	}
 }
 
 .borderized-upper {
@@ -71,14 +75,18 @@
 .socialico, .socialico-ext {
 	font-size: @social_font-size;
 	.font_socialico-regular;
-	opacity: .14;
+	opacity: .24;
 	color: @splash-color;
 	text-shadow: none;
-	transition: opacity 0.25s, font-size 0.15s;
+	transition: opacity 0.25s, zoom 0.15s;
 	&:hover {
-		
 		opacity: 1;
-		font-size: 3em;
+		zoom: 110%;
+	}
+	@media(max-width:@iphone5-width) {
+		opacity: 1;
+		font-size: 2em;
+		&:hover{font-size:2em;}
 	}
 }
 .socialico-ext {
@@ -109,6 +117,16 @@
 		border-width: 39px;
 		margin-left: -39px;
 	}
+	@media(max-width:@iphone5-width) {
+		&:after {
+			border-width: 18px;
+			margin-left: -18px;
+		}
+		&:before {
+			border-width: 28px;
+			margin-left: -28px;
+		}
+	}
 }
 
 /* lists */
@@ -124,5 +142,8 @@
 			display: inline;
 			.margin(0 5px);
 		};
+	}
+	@media(max-width:@iphone5-width) {
+		margin-top: 25px;
 	}
 }

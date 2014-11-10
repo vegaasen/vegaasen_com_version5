@@ -6,5 +6,21 @@
 		font-weight: normal;
 	}
 	.font_quicksand;
-	.margin(200px 40px);
+	.margin(400px 40px);
+	@media(max-width:@iphone5-width) {
+		.margin(100px 10px);
+		.highlight{
+			background-color: #13d0a8;
+			color: #000;
+		}
+		h1 {
+			text-align: left;
+			display: inline-block;
+			clear: both;
+		}
+	}
+	@media(max-width:@tablet-width) and (min-width:@iphone5-width) {
+		text-align: justify;
+		.margin(200px 70px);
+	}
 }

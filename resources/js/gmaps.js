@@ -152,12 +152,11 @@ function initialize() {
       }
   ];
   var mapOptions = {
-    zoom: 11,
-    center: myWhereabouts,
+    zoom: 12,
+    center: sp,
     mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, MAP_ID]
     },
-
     mapTypeId: MAP_ID,
     zoomControl: false,
     scaleControl: false,
@@ -170,10 +169,10 @@ function initialize() {
   map = new google.maps.Map(document.getElementById(mapId), mapOptions);
   var styledMapOptions = {name: 'VegardsWhereabouts'};
   var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
-  new google.maps.Marker({position: myWhereabouts,map: map,icon: marker,opacity:0.9});
-  new google.maps.Marker({position: wo,map: map,icon: marker,opacity:0.8});
-  new google.maps.Marker({position: te,map: map,icon: marker,opacity:0.6});
-  new google.maps.Marker({position: sp,map: map,icon: marker,opacity:0.6});
+  new google.maps.Marker({position: myWhereabouts,map: map,icon: marker,opacity:1,clickable:false});
+  new google.maps.Marker({position: wo,map: map,icon: marker,opacity:0.8,clickable:false});
+  new google.maps.Marker({position: te,map: map,icon: marker,opacity:0.4,clickable:false});
+  new google.maps.Marker({position: sp,map: map,icon: marker,opacity:0.6,clickable:false});
   map.mapTypes.set(MAP_ID, customMapType);
 }
 

@@ -9,9 +9,6 @@
  .boxes {
  	.font_quicksand;
  	.centralized-div();
- 	.title {
-
- 	}
  	.box {
  		width: 375px;
 		height: auto;
@@ -27,13 +24,17 @@
  			img {
  				width: 100%;
  				.box-border-radius();
- 				.desaturate(100%);
  				transition: -webkit-filter 0.25s;
+ 				.desaturate(80%);
  				&:hover {
- 					.desaturate(40%);
+ 					.desaturate(20%);
  				}
  			}
  		};
+ 		.level {
+ 			display: none;
+ 			text-transform: lowercase;
+ 		}
  		&.box-edged {
 			.box-border-radius();
  		};
@@ -45,7 +46,11 @@
  			min-height: 154px;
  			padding: 7px !important;
  			img {
+ 				.desaturate(100%);
  				max-height: 136px;
+ 				&:hover {
+ 					.desaturate(40%);
+ 				}
  			}
  			&:hover .level {
  				display: block;
@@ -66,5 +71,62 @@
  		&:hover {
  			/* nothing as of right now. was [opacity: .2;] */
  		};
+ 	}
+ 	@media(max-width:@iphone5-width) {
+ 		width: 100%;
+ 		.box {
+ 			width: 49%;
+ 			float: none;
+ 			display: inline-block;
+ 			margin-left: 0;
+ 			margin-top: 15px;
+ 			.level {
+ 				display:block;
+ 			}
+ 			&.box-small {
+ 				width: 100px;
+				max-height: 100px;
+				min-height: 0;
+				img {
+					max-height: 85px;
+					.desaturate(30%);
+					&:hover {
+						.desaturate(30%);
+					}
+				}
+				.level {
+					display: block;
+					margin-top: 10px;
+					width: 92px;
+					opacity: .9;
+				}
+ 			}
+ 		}
+ 	}
+ 	@media(max-width:@tablet-width) and (min-width:@iphone5-width) {
+ 		width: 100%;
+ 		.box {
+ 			width: 49%;
+ 			float: none;
+ 			display: inline-block;
+ 			margin-left: 0;
+ 			margin-top: 15px;
+ 			.level {
+ 				display:block;
+ 			}
+ 			&.box-small {
+				min-height: 0;
+				img {
+					.desaturate(60%);
+					&:hover {
+						.desaturate(60%);
+					}
+				}
+				.level {
+					display: block;
+					margin-top: 45px;
+				}
+ 			}
+ 		}
  	}
  }
