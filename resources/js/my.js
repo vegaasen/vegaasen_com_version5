@@ -43,7 +43,7 @@ function addClickEvent(ele, what) {
 }
 
 window.onload = function() {
-  destroyLessCache("/resources/");
+  //destroyLessCache("/resources/");
   onScrollLocation("heading", 0);
   addClickEvent(document.getElementById("menu-ticker"), function() {
     var content = document.getElementById("menu-content");

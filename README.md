@@ -19,7 +19,15 @@ These are the requirements that I strive to apply:
 
 Do the following to generate images:
 
-  
+# Working with the code
+
+This stuff uses Grunt in order to compile the less sources and uglify the scripts on the fly. Just do the following in order to make stuff work out of the box:
+
+  grunt
+
+Thats it :-) Then you can open browser at the desired location, and you're set!
+
+Note that Grunt will as default tasks compile the less and js-files for the first time
 
 # IDE
 
@@ -30,11 +38,12 @@ Do the following to generate images:
 
 * nodejs
 * less
+* uglify
 * html5
 * css3
 * homebrew
 * some JS-framework..if needed at all..?
-* grunt to minify
+* grunt to minify and compile the less stuff
 * jsTestDriver for the test-framework
 
 # Acknowledgements
