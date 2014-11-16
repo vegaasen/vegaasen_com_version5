@@ -15,9 +15,16 @@ These are the requirements that I strive to apply:
 * no pointless large js frameworks
 * minified all kinds of stuff
 
-# Generating images
+# Generating smaller images
 
-Do the following to generate images:
+In order to generate smaller images, I use my own fancy script for Macs :-P which essentially just uses sips.
+It can be found here:
+(you may use whatever you'd like to use when smallifying images.. :-))
+https://gist.github.com/vegaasen/7504361
+
+Use it like this:
+
+  ./smallify.sh /path/to/where-ever/resources/img/deltas 400 *.jpg
 
 # Working with the code
 

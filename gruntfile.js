@@ -15,11 +15,29 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        banner: '/*! vegaasen.com-js-<%= project.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        banner: '/*! vegaasen.com-js-<%= project.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        compress: {
+          dead_code: true
+        }
       },
-      build: {
-        src: 'resources/js/my.js',
-        dest: 'resources/js/my.min.js'
+      my_target: {
+        files: {
+          'resources/js/my.min.js': [
+            'resources/js/original/my.js',
+            'resources/js/original/gmaps.js'
+          ]
+        }
+      }
+    },
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'index.html': 'index.main.html'
+        }
       }
     },
     watch: {
@@ -39,5 +57,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['uglify', 'less', 'watch']);
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.registerTask('default', ['uglify', 'less', 'htmlmin', 'watch']);
 };
