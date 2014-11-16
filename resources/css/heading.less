@@ -2,36 +2,54 @@
 
 @social_font-size: 2em;
 
-.splash {
-	.font_quicksand;
-	background-color: @splash-background_color;
-	.text-shadow(3px, 0, 0.55);
-	.overflow();
-	.full-width();
-	.wrapper {margin-top: 250px;}
-	h1 {
-		color:@splash-color;
-		font-size: 3.5em;
-		margin-bottom: 0;
-	};
-	h3 {
-		color:@splash-color;
-		margin-top: 0;
-		font-size: 1.5em;
-		.text-shadow(0, 0, 0);
-	};
-	@media(max-width:@iphone5-width) {
-		.wrapper {margin-top:0;}
+#heading {
+	height: inherit;
+	&.switched {
+		//empty for now
+	}
+	.splash {
+		.font_quicksand;
+		background-color: @splash-background_color;
+		.text-shadow(3px, 0, 0.55);
+		.overflow();
+		.full-both();
+		.wrapper {margin-top: 250px;}
 		h1 {
-			margin-bottom: 15px;
-			font-size: 4em;
-		}
+			color:@splash-color;
+			font-size: 3.5em;
+			margin-bottom: 0;
+		};
 		h3 {
-			font-size: 1.2em;
-			margin: 0 30px;
+			color:@splash-color;
+			margin-top: 0;
+			font-size: 1.5em;
+			.text-shadow(0, 0, 0);
+		};
+		@media(max-width:@iphone5-width) {
+			.wrapper {margin-top:0;}
+			h1 {
+				margin-bottom: 15px;
+				font-size: 4em;
+			}
+			h3 {
+				font-size: 1.2em;
+				margin: 0 30px;
+			}
+		}
+		@media(max-width:@tablet-width) and (min-width:@iphone5-width) {
+			.wrapper {margin-top: 175px;}
 		}
 	}
-	@media(max-width:@tablet-width) and (min-width:@iphone5-width) {
-		.wrapper {margin-top: 175px;}
+
+	@media(min-width:@tablet-width) {
+		&.switched {
+			position: fixed;
+			height: 10px;
+			margin-top: 0;
+			bottom: 0;
+			transform: rotate(0.5turn);
+			z-index: 9999;
+			.full-width();
+		}
 	}
 }

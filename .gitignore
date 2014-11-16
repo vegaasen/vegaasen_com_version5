@@ -1,5 +1,10 @@
 # GitIgnore for web-projcs
 # @author vegaasen
+
+# Computer-stuff
 .DS_Store
 *.log
 *.swp
+
+# Output
+my.css

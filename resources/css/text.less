@@ -1,4 +1,7 @@
 .textual {
+	&.margined{
+		.margin(400px 40px);
+	}
 	.code {
 		.font_code;
 	}
@@ -6,9 +9,10 @@
 		font-weight: normal;
 	}
 	.font_quicksand;
-	.margin(400px 40px);
 	@media(max-width:@iphone5-width) {
-		.margin(100px 10px);
+		&.margined {
+			.margin(100px 10px);
+		}
 		.highlight{
 			background-color: #13d0a8;
 			color: #000;
@@ -23,4 +27,8 @@
 		text-align: justify;
 		.margin(200px 70px);
 	}
+}
+
+small {
+	font-size: 8pt;
 }

@@ -8,7 +8,15 @@
 
 .full-width {
 	width: 100%;
+}
+
+.full-height {
 	height: 100%;
+}
+
+.full-both {
+	.full-width();
+	.full-height();
 }
 
 .desaturate(@amount) {
@@ -39,6 +47,10 @@
 
 .centralized {
 	text-align: center;
+}
+
+.centralized-important {
+	text-align: center !important;
 }
 
 .center-me {

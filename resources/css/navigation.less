@@ -30,16 +30,19 @@
 				display:block;
 			}
 			&.submenu {
+				.font_quicksand;
 				cursor: default;
 				width: auto;
 				height: auto;
-				max-width: 100px;
-				min-height: 100px;
+				max-width: 120px;
 				padding: 10px;
 				display: none;
 				margin-top: -30px;
 				margin-left: 42px;
 				transition: opacity 0.25s;
+				&.display {
+					display: block !important;
+				}
 			}
 			&:nth-child(1n+0) {
 				margin-right: 5px;
