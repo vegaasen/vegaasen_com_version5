@@ -41,6 +41,9 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      options: {
+        livereload: true,
+      },
       styles: {
         files: ['resources/css/less/*.less'],
         tasks: ['less'],
@@ -51,6 +54,10 @@ module.exports = function(grunt) {
       scripts: {
         files: ['resources/js/*.js'],
         tasks: ['uglify']
+      },
+      html: {
+        files: ['*.html'],
+        tasks: ['htmlmin']
       }
     }
   });

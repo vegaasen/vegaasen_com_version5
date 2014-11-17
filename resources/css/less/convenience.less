@@ -6,6 +6,10 @@
 @borderized-iphone: 7px solid @borderized-color;
 @borderized-position: relative;
 
+.full-width-override {
+	.full-width() !important;
+}
+
 .full-width {
 	width: 100%;
 }
@@ -59,10 +63,13 @@
 
 .centralized-div() {
 	.centralized;
-	width: 90%;
 	overflow: hidden;
-	margin: 0 auto;
 	display: block;
+}
+
+.centralized-div-simple() {
+	width: 90%;
+	margin: 0 auto;
 }
 
 .borderized {
@@ -96,9 +103,9 @@
 		zoom: 110%;
 	}
 	@media(max-width:@iphone5-width) {
-		opacity: 1;
-		font-size: 2em;
-		&:hover{font-size:2em;}
+		opacity: .5;
+		font-size: 1.8em;
+		&:hover{font-size:1.8em;}
 	}
 }
 .socialico-ext {
@@ -151,11 +158,12 @@
 		&.list_one-line {
 		};
 		li {
-			display: inline;
+			display: inline-block;
 			.margin(0 5px);
 		};
 	}
 	@media(max-width:@iphone5-width) {
-		margin-top: 25px;
+		font-size: .8em;
+		margin-top: 35px;
 	}
 }

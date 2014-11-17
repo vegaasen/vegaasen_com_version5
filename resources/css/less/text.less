@@ -1,4 +1,5 @@
 .textual {
+	.centralized-div-simple();
 	&.margined{
 		.margin(400px 40px);
 	}
@@ -24,11 +25,15 @@
 		}
 	}
 	@media(max-width:@tablet-width) and (min-width:@iphone5-width) {
+		width: auto;
 		text-align: justify;
 		.margin(200px 70px);
 	}
 }
 
 small {
-	font-size: 8pt;
+	font-size: 0.7em;
+	@media(max-width:@iphone5-width) {
+		font-size: 0.6em;
+	}
 }

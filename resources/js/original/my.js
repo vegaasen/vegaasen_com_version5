@@ -45,7 +45,7 @@ function addClickEvent(ele, what) {
 window.onload = function() {
   //destroyLessCache("/resources/");
   onScrollLocation("heading", 0);
-  addClickEvent(document.getElementById("menu-ticker"), function() {
+  /*addClickEvent(document.getElementById("menu-ticker"), function() {
     var content = document.getElementById("menu-content");
     var classes = content.classList;
     if(!classes.contains("display")) {
@@ -55,7 +55,7 @@ window.onload = function() {
       console.log("hiding");
       classes.remove("display");
     }
-  });
+  });*/
 }
 
 window.onscroll = function() {

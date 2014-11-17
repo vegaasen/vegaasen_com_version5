@@ -9,9 +9,14 @@
 .pointless {
 	height: 200px;
 	h1 {
-		font-weight:normal;
+		font-weight: normal;
 		color: #aaaaaa;
 		.font_code;
+	}
+	@media(max-width:@iphone5-width) {
+		h1 {
+			font-size: 1.2em;
+		}
 	}
 }
 

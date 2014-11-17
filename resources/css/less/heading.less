@@ -16,7 +16,7 @@
 		.wrapper {margin-top: 250px;}
 		h1 {
 			color:@splash-color;
-			font-size: 3.5em;
+			font-size: 5.2em;
 			margin-bottom: 0;
 		};
 		h3 {
@@ -29,18 +29,22 @@
 			.wrapper {margin-top:0;}
 			h1 {
 				margin-bottom: 15px;
-				font-size: 4em;
+				font-size: 4.5em;
 			}
 			h3 {
-				font-size: 1.2em;
+				font-size: 1.4em;
 				margin: 0 30px;
 			}
+		}
+		@media(max-width:@tablet-width) {
+				h1 {
+					font-size: 5em;
+				}
 		}
 		@media(max-width:@tablet-width) and (min-width:@iphone5-width) {
 			.wrapper {margin-top: 175px;}
 		}
 	}
-
 	@media(min-width:@tablet-width) {
 		&.switched {
 			position: fixed;
