@@ -1,12 +1,12 @@
 /* TEAM */
 
-  Everything: Vegard Aasen
+	Everything: Vegard Aasen
 	Twitter: @vegaasen
 	From:Odda, Hordaland, Norway
 
 /* SITE */
 
-  Last update:2014/11/16
+	Last update:2014/11/17
 	Language: Norwegian / English
 	Doctype: HTML5
 	IDE: vim, Atom
