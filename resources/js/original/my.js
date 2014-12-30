@@ -43,19 +43,8 @@ function addClickEvent(ele, what) {
 }
 
 window.onload = function() {
-  //destroyLessCache("/resources/");
   onScrollLocation("heading", 0);
-  /*addClickEvent(document.getElementById("menu-ticker"), function() {
-    var content = document.getElementById("menu-content");
-    var classes = content.classList;
-    if(!classes.contains("display")) {
-      console.log("showing");
-      classes.add("display");
-    }else{
-      console.log("hiding");
-      classes.remove("display");
-    }
-  });*/
+  var s = skrollr.init();
 }
 
 window.onscroll = function() {
