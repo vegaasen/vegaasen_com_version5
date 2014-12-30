@@ -19,8 +19,8 @@ module.exports = function(grunt) {
         compress: {
           dead_code: true
         }
-      },
-      my_target: {
+      }
+      /*my_target: {
         files: {
           'resources/js/my.min.js': [
             'resources/js/original/my.js',
@@ -28,6 +28,7 @@ module.exports = function(grunt) {
           ]
         }
       }
+      */
     },
     htmlmin: {
       dist: {
