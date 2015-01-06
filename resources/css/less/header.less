@@ -1,0 +1,28 @@
+/* represents the stuff that makes up the header-part */
+#heading {
+  .vertical-it();
+  background-color: #fff;
+  text-align: center;
+  .introduction {
+    .centerify();
+    width: 60%;
+    max-width: 1000px;
+    position: relative;
+    .myself {
+      font-size: 0;
+      display: inline-block;
+    }
+    .textual {
+      h1 {
+        margin: 0;
+        font-size: 5.2em;
+        text-shadow: 0 3px 0 rgba(150,150,150,0.55);
+      }
+    }
+  }
+  &::before {
+    .centerify();
+    content: "";
+    height: 100%;
+  }
+}

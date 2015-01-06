@@ -15,6 +15,19 @@ These are the requirements that I strive to apply:
 * no pointless large js frameworks
 * minified all kinds of stuff
 
+# Build the thingie
+
+Just run the following command in order to build the shait:
+
+  npm install grunt
+  npm install grunt-cli
+  npm install grunt-contrib-less
+  npm install grunt-contrib-htmlmin
+  npm install grunt-contrib-uglify
+  npm install grunt-contrib-watch
+
+When thats done, just run grunt from the project-home :-)
+
 # Generating smaller images
 
 In order to generate smaller images, I use my own fancy script for Macs :-P which essentially just uses sips.

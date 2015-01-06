@@ -1,0 +1,34 @@
+/* This represents all convenience stuff that I might use here and there to simplify stuff */
+
+.full-width() {
+  width: 100%;
+}
+
+.vertical-it() {
+  .full-width();
+  height: 100vh;
+  position: relative;
+}
+
+.centerify() {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.no-padding-margin() {
+  margin: 0;
+  padding: 0;
+}
+
+.no-horizontal-bar() {
+  overflow-x: hidden;
+}
+
+.no-vertical-bar() {
+  overflow-x: hidden;
+}
+
+.no-bars() {
+  .no-vertical-bar();
+  .no-horizontal-bar();
+}

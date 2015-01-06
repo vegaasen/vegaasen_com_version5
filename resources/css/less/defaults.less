@@ -1,0 +1,55 @@
+/* this controls all the defaults
+  **everything here is subject to be overridden somewhere else. there should be no !important-flags lurking around :-)**
+                                                                        ^----- "should not be" :-P
+ */
+
+div, body {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font: inherit;
+   font-size: 100%;
+   line-height: 1;
+   vertical-align: baseline;
+ }
+
+ .container {
+   .full-width();
+   //position: fixed;
+   @media(min-width:@tablet-width) {
+     height: 1000px;
+     &.container-large {
+       height: 1500px;
+     }
+   }
+ }
+
+//represents parallax-containers
+.p-container {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 1000;
+  .p-body {
+    margin: 0 auto;
+    position: relative;
+    min-height: 450px;
+    @media(min-width:@tablet-width) {
+      width: 900px;
+    }
+    &.normal {
+    }
+    &.full {
+      min-height: 450px;
+      .full-width();
+    }
+  }
+}
+
+.small {
+  font-size: .4em;
+}
+
+.italic {
+  font-style: italic;
+}

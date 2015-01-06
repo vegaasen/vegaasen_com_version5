@@ -2,7 +2,7 @@
 	Using the famous LESS-language to do several things to my css-files used within my site
 
 	@description vegaasen.com less configuraiton css file
-	@version 5.0.0-SNAPSHOT
+	@version 5.5.0-SNAPSHOT
 */
 
 /* Globals */
@@ -13,4 +13,20 @@
 @iphone5-width: 650px;
 @tablet-width: 1100px;
 
-//@import "fonts.less";
+/* Main stuff */
+@import "convenience.less";
+@import "defaults.less";
+@import "fancy-stuff.less";
+
+/* Triggers */
+@import "triggers.less";
+
+@import "header.less";
+@import "navigation.less";
+
+/* parallaxd layers -- dunno if the syntax works on ><nix.. */
+@import "layers\\layer-2-me.less";
+@import "layers\\layer-3-running.less";
+@import "layers\\layer-4-vag.less";
+@import "layers\\layer-5-skills.less";
+@import "layers\\layer-n-contact.less";

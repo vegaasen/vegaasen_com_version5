@@ -1,0 +1,21 @@
+/* this is related to the navigation itself */
+#page-navigation {
+  z-index: 9999;
+  position: absolute;
+  bottom:0;
+  ul.bits {
+    .no-padding-margin();
+    .centerify();
+    list-style: none;
+    text-align: center;
+    height: 100%;
+    li {
+      .centerify();
+    }
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    bottom: inherit;
+  }
+}

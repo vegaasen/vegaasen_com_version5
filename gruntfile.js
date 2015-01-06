@@ -46,14 +46,14 @@ module.exports = function(grunt) {
         livereload: true,
       },
       styles: {
-        files: ['resources/css/less/*.less'],
+        files: {'resources/css/less/*.less' : 'resources/css/less/layers/*.less'},
         tasks: ['less'],
         options: {
           nospawn: true
         }
       },
       scripts: {
-        files: ['resources/js/*.js'],
+        files: ['**/*.js'],
         tasks: ['uglify']
       },
       html: {
