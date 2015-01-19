@@ -7,10 +7,10 @@ var wo = new google.maps.LatLng(59.898766,10.6261);
 var te = new google.maps.LatLng(59.92384,10.731749);
 var sp = new google.maps.LatLng(59.913196,10.732692);
 var mapColor = "#363636";
-var marker = "/resources/img/map/location.png";
+var marker = "resources/img/map/location.png";
 
 function initialize() {
-  var featureOpts = 
+  var featureOpts =
   [
       {
           "featureType": "administrative",
@@ -137,7 +137,7 @@ function initialize() {
           "elementType": "geometry",
           "stylers": [
               {
-                  "color": "#13d0a8"
+                  "color": "#9AB2DF"
               }
           ]
       },
@@ -165,7 +165,6 @@ function initialize() {
     disableDoubleClickZoom: true,
     scrollWheel: false
   };
-
   map = new google.maps.Map(document.getElementById(mapId), mapOptions);
   var styledMapOptions = {name: 'VegardsWhereabouts'};
   var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);

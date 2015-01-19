@@ -7,6 +7,7 @@ jQuery(function() {
   renderSceneLayer2(controller);
   renderSceneLayer3(controller);
   renderSceneLayer4(controller);
+  renderSceneLayer7(controller);
 });
 
 function renderSceneLayer2(controller) {
@@ -63,6 +64,17 @@ function renderSceneLayer4Parallax(controller) {
 function renderSceneLayer4Picture(controller) {
   new ScrollScene({triggerElement: ".layer-4 .heart", triggerHook: "onEnter", duration: 5000})
   .setTween(TweenMax.staggerFromTo(".layer-4 .heart", 1, {'margin-top': 400}, {'margin-top': 100, ease: Back.easeOut}, 0.15))
+  .addTo(controller);
+}
+
+function renderSceneLayer7(controller) {
+  console.log("Rendering Scene 7");
+  renderSceneLayer7Parallax(controller);
+}
+
+function renderSceneLayer7Parallax(controller) {
+  new ScrollScene({triggerElement: ".layer-7", triggerHook: "onEnter", duration: $(window).height() * 2})
+  .setTween(TweenMax.from(".layer-7 > .parallax-background", 1, {top: "-60%", ease: Linear.easeOut}))
   .addTo(controller);
 }
 

@@ -1,7 +1,8 @@
 /* this controls all the defaults
-  **everything here is subject to be overridden somewhere else. there should be no !important-flags lurking around :-)**
-                                                                        ^----- "should not be" :-P
- */
+  **everything here is subject to be overridden somewhere else. there should be no !important-flags lurking around :-)**                                                                        ^----- "should not be" :-P
+*/
+
+@link-color: #ed4036;
 
 div, body {
    margin: 0;
@@ -13,9 +14,47 @@ div, body {
    vertical-align: baseline;
  }
 
+ h2 {
+   font-size: 32px;
+   line-height: 39px;
+   text-transform: none;
+   letter-spacing: 0px;
+   font-weight: 300;
+   font-style: normal;
+   margin: .5em 0;
+ }
+
+ h3{
+   font-size: 14px;
+   line-height: 16px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: 300;
+   font-style: normal;
+   margin: 1.2em 0;
+ }
+
+ a {
+   color: @link-color;
+   font-weight: bold;
+   text-decoration: none;
+   .transition(border-bottom, 0.2s);
+   &:hover {
+     border-bottom: 3px solid @link-color;
+   }
+ }
+
  .container {
    .full-width();
    //position: fixed;
+   &.notched {
+     /* if the notch-thing is included, add this to the container (jeah, a proper fix must be applied later :-P) */
+     position: relative;
+     .p-container {
+       position: absolute;
+       .full-width();
+     }
+   }
    @media(min-width:@tablet-width) {
      height: 1000px;
      &.container-large {
@@ -30,6 +69,10 @@ div, body {
   height: 100%;
   margin: 0 auto;
   z-index: 1000;
+  .p-heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
   .p-body {
     margin: 0 auto;
     position: relative;
@@ -46,10 +89,35 @@ div, body {
   }
 }
 
+hr {
+  &.separator {
+    border: 1px solid #EDEDED;
+    width: 80%;
+    margin: 25px auto;
+  }
+}
+
+.center {
+  text-align: center !important;
+}
+
+.left {
+  text-align: left !important;
+}
+
 .small {
   font-size: .4em;
 }
 
 .italic {
   font-style: italic;
+}
+
+.code, code {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #697A99;
+  background-color: #FAFAFA;
+  border-radius: 4px;
 }

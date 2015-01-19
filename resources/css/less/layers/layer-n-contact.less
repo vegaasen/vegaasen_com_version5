@@ -1,6 +1,23 @@
+@map-height: 200px;
+
 .layer-n {
   position: relative;
+  height: 800px;
   .p-container {
     position: absolute;
+    .row-heading {
+      text-align: left;
+    }
+    .p-body {
+      width: 1000px;
+    }
+    .map {
+      width: 100%;
+      height: @map-height;
+      margin: 0;
+      #map-me {
+        height: @map-height;
+      }
+    }
   }
 }

@@ -32,3 +32,15 @@
   .no-vertical-bar();
   .no-horizontal-bar();
 }
+
+.desaturate(@amount) {
+  -webkit-filter: grayscale(@amount);
+  -moz-filter: grayscale(@amount);
+  filter: grayscale(@amount);
+}
+
+.transition(@whats, @timing) {
+  transition-property: @whats;
+  transition-duration: @timing;
+  transition-timing-function: ease-out;
+}
